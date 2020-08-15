@@ -1,5 +1,22 @@
 # alphacoding-tinytales
 
+algorithm for this assignment..
+the encoding part is done applying some logics on the ascii valueof alphabates of string.
+in this assignment as it is required that the encoded string should be of shoter length so i am making the encoded string exactly by incrementing the loop varible +2,it gives the resultant string exactly half of the length of the string if string length is even and if string length is odd then i am just putting the ascii of last character at the end.
+for (let i = 0; i < s.length - 1; i += 2) this is loop condition in this loop i have to work on generating encoded string and the key.
+the encoded output i generating on the basis of the diffeence of the ascii value of ith index and (i+1)th if it gives value less than 0 then i am adding it i with 97 and concating the char value in the output string, i.e out = out.concat(String.fromCharCode(s.charCodeAt(i + 1) - s.charCodeAt(i) + 97));
+if the difference if ith and (i+1)th is positive then i am concatinating string into by adding 65 to the charcode.
+i.e  out = out.concat(String.fromCharCode(s.charCodeAt(i) - s.charCodeAt(i + 1) + 65));.
+if the string length is odd then at the last position of the output string i am putting the ascii of the alphabate.
+i.e if (s.length % 2 != 0) {
+        var z = s.charCodeAt((s.length - 1));
+        out = out.concat(z);
+    }
+for storing the key value i am just concatinating sum of the ascii of ith and (i+1)th followed by the character which is generated after subtracting the ascii of ith and (i+1)th
+in lower case(i.e adding 97 to that)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 This Assignment is made using Node js and React js.Backend server is created with express.
 where as front-end is designed with React js.For making the page responsive bootstrap-4 styling(grid system) has been used.Also materialize css has been used for presenting
 toast, if there is some error at client side.
@@ -42,7 +59,7 @@ Dependencies in the client side :-
 2. react-dom
 3. react-router-dom
 4. react-script
-5. materialize-css
+5. materialize-cs
 
 key point:- I have used hooks for storing and setting the data and on the basis of that data, the UI is rendering
 
